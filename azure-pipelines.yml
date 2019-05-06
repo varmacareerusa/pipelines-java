@@ -21,10 +21,10 @@ resources:
     source: Test1
 
 steps:
-#- checkout: self  # self represents the repo where the initial Pipelines YAML file was found
-  #clean: true
-#  fetchDepth: 5
- # lfs: true
+- checkout: self  # self represents the repo where the initial Pipelines YAML file was found
+  clean: true
+  fetchDepth: 5
+  lfs: true
 
 - task: Maven@3
   inputs:
