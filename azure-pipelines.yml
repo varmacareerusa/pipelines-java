@@ -17,11 +17,10 @@ resources:
     source: Test1
 
 steps:
-- checkout: secondaryRepo  
+- checkout: self  # self represents the repo where the initial Pipelines YAML file was found
   clean: false
   fetchDepth: 5
   lfs: true
-- checkout: self
 
 - task: Maven@3
   inputs:
