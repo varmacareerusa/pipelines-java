@@ -12,11 +12,11 @@ pool:
 resources:  
   repositories:
   - repository: primaryRepo     
-    type: AzureRepos
+    type: Azure
     connection: varmacareerusa
     source: pipelines-java
   - repository: secondaryRepo      
-    type: GitHub
+    type: Azure
     connection: varmacareerusa
     source: Teat
 
