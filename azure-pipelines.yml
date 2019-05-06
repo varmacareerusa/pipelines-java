@@ -16,6 +16,11 @@ resources:
     connection: varmacareerusa
     source: Test1
 
+  - checkout: secondaryRepo  
+    clean: false
+    fetchDepth: 5
+    lfs: true
+
 steps:
 - task: Maven@3
   inputs:
