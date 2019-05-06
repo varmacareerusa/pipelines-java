@@ -16,12 +16,13 @@ resources:
     connection: varmacareerusa
     source: Test1
 
-  - checkout: secondaryRepo  
-    clean: false
-    fetchDepth: 5
-    lfs: true
-
 steps:
+- checkout: secondaryRepo  
+  clean: false
+  fetchDepth: 5
+  lfs: true
+- checkout: self
+
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
