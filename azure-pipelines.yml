@@ -9,18 +9,22 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
-resources:         
+resources:  
   repositories:
+  - repository: primaryRepo     
+    type: GitHub
+    connection: varmacareerusa
+    source: pipelines-java
   - repository: secondaryRepo      
     type: GitHub
     connection: varmacareerusa
     source: Test1
 
-steps:
-- checkout: self  # self represents the repo where the initial Pipelines YAML file was found
-  clean: true
-  fetchDepth: 5
-  lfs: true
+#steps:
+#- checkout: self  # self represents the repo where the initial Pipelines YAML file was found
+  #clean: true
+#  fetchDepth: 5
+ # lfs: true
 
 - task: Maven@3
   inputs:
