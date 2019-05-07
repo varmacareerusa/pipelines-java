@@ -9,16 +9,16 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
-resources:  
-  repositories:
-  - repository: primaryRepo     
-    type: Git
-    connection: varmacareerusa
-    source: pipelines-java
-  - repository: secondaryRepo      
-    type: Git
-    connection: varmacareerusa
-    source: Teat
+#resources:  
+ # repositories:
+  #- repository: primaryRepo     
+   # type: Git
+    #connection: varmacareerusa
+    #source: pipelines-java
+  #- repository: secondaryRepo      
+   # type: Git
+    #connection: varmacareerusa
+    #source: Teat
 
 steps:
 #- checkout: self  # self represents the repo where the initial Pipelines YAML file was found
